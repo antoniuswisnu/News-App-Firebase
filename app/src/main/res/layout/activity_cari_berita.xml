@@ -23,98 +23,83 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+
+    <TextView
+        android:id="@+id/tvTglLahir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins"
+        android:text="Tanggal Lahir"
+        android:textColor="#252525"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+
+    <TextView
+        android:id="@+id/datePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="#ADDDD0"
+        android:padding="6dp"
+        android:fontFamily="@font/poppins"
+        android:onClick="showDatePickerDialog1"
+        android:text="Masukkan Tanggal Lahir"
+        android:textColor="#252525"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTglLahir"
+        tools:ignore="OnClick" />
+
+
+    <TextView
+        android:id="@+id/tvUsia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudul"
-        tools:layout_editor_absoluteX="16dp">
-
-        <TextView
-            android:id="@+id/tvTglLahir"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="Tanggal Lahir: "
-            android:textColor="#252525"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
-
-        <TextView
-            android:id="@+id/datePicker"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:onClick="showDatePickerDialog1"
-            android:text="Masukkan Usia"
-            android:textColor="#252525"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tvTglLahir"
-            app:layout_constraintTop_toBottomOf="@+id/tvJudul"
-            tools:ignore="OnClick" />
+        android:fontFamily="@font/poppins"
+        android:text="Usia Anda"
+        android:textColor="#252525"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
 
 
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout2"
+    <TextView
+        android:id="@+id/tvHasilUsia"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="32dp"
+        android:background="#ADDDD0"
+        android:fontFamily="@font/poppins"
+        android:text="usia"
+        android:textColor="#252525"
+        android:textSize="16sp"
+        android:padding="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUsia" />
 
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="0dp">
-
-        <TextView
-            android:id="@+id/tvUsia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="Usia Anda: "
-            android:textColor="#252525"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn" />
-
-
-        <TextView
-            android:id="@+id/tvHasilUsia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="72dp"
-            android:text="usia"
-            android:textColor="#252525"
-            android:textSize="16sp"
-            app:layout_constraintStart_toEndOf="@+id/tvUsia"
-            app:layout_constraintTop_toBottomOf="@+id/btn" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:id="@+id/linearLayout3"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/tvSpinner"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:layout_editor_absoluteX="0dp">
-
-        <TextView
-            android:id="@+id/tvSpinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:text="Kategori Berita:"
-            android:textColor="#252525"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btn" />
-
-
-    </LinearLayout>
+        android:fontFamily="@font/poppins"
+        android:text="Kategori Berita:"
+        android:textColor="#252525"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvHasilUsia" />
 
     <Spinner
         android:id="@+id/spn1"
@@ -124,12 +109,12 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/border"
+        android:fontFamily="@font/poppins"
         android:padding="19dp"
         android:textColor="#252525"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
-
+        app:layout_constraintTop_toBottomOf="@+id/tvSpinner" />
 
     <Button
         android:id="@+id/btnSubmit"
@@ -138,10 +123,11 @@
         android:layout_marginStart="64dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="64dp"
-        android:backgroundTint="#ADDDD0"
+        android:background="#ADDDD0"
+
+        android:onClick="cariBerita"
         android:text="Cari Berita"
         android:textStyle="bold"
-        android:onClick="cariBerita"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spn1"
