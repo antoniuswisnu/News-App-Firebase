@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.cobauts">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -14,19 +16,34 @@
         android:theme="@style/Theme.CobaUTS"
         tools:targetApi="31">
         <activity
-            android:name=".CariBeritaActivity"
+            android:name=".login.RegisterUsernameActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".bookmark.HotNewsActivity"
             android:exported="false" />
         <activity
-            android:name=".ThirdActivity"
+            android:name=".bookmark.BookmarkActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".activity.AddNewsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".login.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.CariBeritaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".activity.DetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RV.ThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".login.LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

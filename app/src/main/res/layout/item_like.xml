@@ -33,7 +33,7 @@
             />
 
         <TextView
-            android:id="@+id/tv_item_title"
+            android:id="@+id/likeTvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
@@ -45,7 +45,7 @@
             tools:text="text judul" />
 
         <TextView
-            android:id="@+id/tv_item_desc"
+            android:id="@+id/likeTvDesc"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ellipsize="end"
@@ -81,7 +81,7 @@
                 android:background="@drawable/ic_baseline_bookmark_border_24" />
 
             <Button
-                android:id="@+id/btnLike"
+                android:id="@+id/favBtn"
                 android:background="@drawable/ic_baseline_favorite_border_24"
                 android:layout_gravity="end"
                 android:layout_width="30dp"

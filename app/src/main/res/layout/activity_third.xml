@@ -5,8 +5,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/vector"
-    tools:context=".ThirdActivity"
+    android:background="@drawable/bg"
+    tools:context=".RV.ThirdActivity"
     >
 
     <TextView
@@ -22,19 +22,31 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/rv_news"
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swip"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="12dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvJudul" />
+        app:layout_constraintTop_toBottomOf="@+id/tvJudul">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_news"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvJudul"
+            tools:listitem="@layout/item_news" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
